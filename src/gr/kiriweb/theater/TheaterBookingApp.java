@@ -2,6 +2,48 @@ package gr.kiriweb.theater;
 
 import java.util.Scanner;
 
+/**
+ * Theater Booking Management System
+ *
+ * This application manages seat bookings for a theater with 30 rows and 12 columns.
+ * Each seat can be booked or canceled by the user through an interactive menu system.
+ * The program displays the current seating arrangement and handles invalid inputs gracefully.
+ *
+ * Features:
+ * - Book a seat by specifying column (A-L) and row (1-30).
+ * - Cancel a booking for a specific seat.
+ * - Display the current seating arrangement, showing booked seats as "X" and available seats as "O".
+ * - Exit the program via the menu.
+ *
+ * Classes and Methods:
+ * - `main(String[] args)`: The entry point of the program.
+ * - `displayMenu()`: Displays the main menu options.
+ * - `getUserChoice()`: Retrieves and validates the user's menu choice.
+ * - `bookMenu()`: Handles user input for booking a seat.
+ * - `cancelMenu()`: Handles user input for canceling a seat booking.
+ * - `book(char column, int row)`: Books a specific seat if available.
+ * - `cancel(char column, int row)`: Cancels a booking for a specific seat if already booked.
+ * - `isValidSeat(char column, int row)`: Validates that the specified seat is within the valid range.
+ * - `displaySeats()`: Displays the current theater seating chart.
+ *
+ * Input:
+ * - The user interacts with the menu to book, cancel, or view seats.
+ * - Columns are specified as single letters (A-L).
+ * - Rows are specified as integers (1-30).
+ *
+ * Output:
+ * - Messages indicating success or failure of booking/canceling operations.
+ * - A seating chart showing the status of all seats.
+ *
+ * Example Usage:
+ * - Enter "1" to book a seat. Specify the column and row as prompted.
+ * - Enter "2" to cancel a booking. Specify the column and row as prompted.
+ * - Enter "3" to view the seating chart.
+ * - Enter "4" to exit the application.
+ *
+ * Author: Kyriakos Koutsourelis
+ * Portfolio: https://github.com/Kiriweb
+ */
 public class TheaterBookingApp {
     // 2D array to represent the theater (static to access directly in main)
     public static final boolean[][] seats = new boolean[30][12];
